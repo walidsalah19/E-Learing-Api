@@ -1,0 +1,20 @@
+{
+  "Version": 1,
+  "Hash": "ZSnlYl45nDQm94NOAjps0d/71IpajNmbfT1aV0/Z1FA=",
+  "Source": "E-Learning",
+  "BasePath": "_content/E-Learning",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "E-Learning\\wwwroot",
+      "Source": "E-Learning",
+      "ContentRoot": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\",
+      "BasePath": "_content/E-Learning",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [],
+  "Endpoints": []
+}
