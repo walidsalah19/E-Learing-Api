@@ -197,3 +197,4 @@ G:\c# projects\Apis\E-Learning\E-Learning\obj\Debug\net8.0\refint\E-Learning.dll
 G:\c# projects\Apis\E-Learning\E-Learning\obj\Debug\net8.0\E-Learning.pdb
 G:\c# projects\Apis\E-Learning\E-Learning\obj\Debug\net8.0\E-Learning.genruntimeconfig.cache
 G:\c# projects\Apis\E-Learning\E-Learning\obj\Debug\net8.0\ref\E-Learning.dll
+G:\c# projects\Apis\E-Learning\E-Learning\obj\Debug\net8.0\E-Learning.sourcelink.json

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace E_Learning.Dtos
 {
-    public class UserDto
+    public class CreateUserDto
     {
         [MaxLength(25)]
         [MinLength(3)]

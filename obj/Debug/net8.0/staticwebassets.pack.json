@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\8018c944-5945-4b6a-aee7-761d7e31b007_profile.png",
+      "PackagePath": "staticwebassets\\Images\\8018c944-5945-4b6a-aee7-761d7e31b007_profile.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.E-Learning.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.E-Learning.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.E-Learning.props",
+      "PackagePath": "build\\E-Learning.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.E-Learning.props",
+      "PackagePath": "buildMultiTargeting\\E-Learning.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.E-Learning.props",
+      "PackagePath": "buildTransitive\\E-Learning.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

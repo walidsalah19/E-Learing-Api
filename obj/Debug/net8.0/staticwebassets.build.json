@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZSnlYl45nDQm94NOAjps0d/71IpajNmbfT1aV0/Z1FA=",
+  "Hash": "5XnD6SzM1AKoproWsleREag41sRlGVRQAZZOflCFLVY=",
   "Source": "E-Learning",
   "BasePath": "_content/E-Learning",
   "Mode": "Default",
@@ -15,6 +15,111 @@
       "Pattern": "**"
     }
   ],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": [
+    {
+      "Identity": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\8018c944-5945-4b6a-aee7-761d7e31b007_profile.png",
+      "SourceId": "E-Learning",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\",
+      "BasePath": "_content/E-Learning",
+      "RelativePath": "Images/8018c944-5945-4b6a-aee7-761d7e31b007_profile#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "p6ok3lqfgg",
+      "Integrity": "cW6ojrhfnHRLeIsoWlhQSp2Z+Bj0W/n6vIN9P5GOjH0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\8018c944-5945-4b6a-aee7-761d7e31b007_profile.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "Images/8018c944-5945-4b6a-aee7-761d7e31b007_profile.p6ok3lqfgg.png",
+      "AssetFile": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\8018c944-5945-4b6a-aee7-761d7e31b007_profile.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32174"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cW6ojrhfnHRLeIsoWlhQSp2Z+Bj0W/n6vIN9P5GOjH0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Dec 2024 12:49:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p6ok3lqfgg"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/8018c944-5945-4b6a-aee7-761d7e31b007_profile.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cW6ojrhfnHRLeIsoWlhQSp2Z+Bj0W/n6vIN9P5GOjH0="
+        }
+      ]
+    },
+    {
+      "Route": "Images/8018c944-5945-4b6a-aee7-761d7e31b007_profile.png",
+      "AssetFile": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\8018c944-5945-4b6a-aee7-761d7e31b007_profile.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32174"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cW6ojrhfnHRLeIsoWlhQSp2Z+Bj0W/n6vIN9P5GOjH0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Dec 2024 12:49:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cW6ojrhfnHRLeIsoWlhQSp2Z+Bj0W/n6vIN9P5GOjH0="
+        }
+      ]
+    }
+  ]
 }
