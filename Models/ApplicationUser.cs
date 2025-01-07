@@ -12,5 +12,7 @@ namespace E_Learning.Models
         [DataType(DataType.DateTime)]
         public DateTime updatedAt { get; set; }
 
+        public List<RefreshToken>? RefreshTokens { get; set; }
+
     }
 }

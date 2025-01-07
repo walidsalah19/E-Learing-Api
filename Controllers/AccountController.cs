@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using E_Learning.Dtos;
 using E_Learning.Helpers;
+using E_Learning.Interfaces.IServices;
 using E_Learning.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -23,13 +24,15 @@ namespace E_Learning.Controllers
         private readonly IConfiguration config;
         private readonly IMapper mapper;
         private readonly IWebHostEnvironment webHostEnvironment;
+        private readonly ITokenServices tokenServices;
 
-        public AccountController(UserManager<ApplicationUser> userManager, IConfiguration config, IMapper mapper, IWebHostEnvironment webHostEnvironment)
+        public AccountController(UserManager<ApplicationUser> userManager, IConfiguration config, IMapper mapper, IWebHostEnvironment webHostEnvironment, ITokenServices tokenServices)
         {
             this.userManager = userManager;
             this.config = config;
             this.mapper = mapper;
             this.webHostEnvironment = webHostEnvironment;
+            this.tokenServices = tokenServices;
         }
 
         [AllowAnonymous]
@@ -42,7 +45,7 @@ namespace E_Learning.Controllers
                 if(isUserFind ==null)
                 {
                     var userApp = mapper.Map<ApplicationUser>(user);
-                    userApp.profilePicture =await UploadImage.ProcessUploadedFile(user.ProfileImage, webHostEnvironment);
+                    userApp.profilePicture =await ImageHelper.ProcessUploadedImage(user.ProfileImage, webHostEnvironment);
 
                     var createValue = await userManager.CreateAsync(userApp, user.Password);
                     if (createValue.Succeeded)
@@ -62,7 +65,7 @@ namespace E_Learning.Controllers
             Log.Information("", "in valid data {user}", user);
             return BadRequest(ModelState);
         }
-
+     
         [AllowAnonymous]
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] UserLoginDto loginDto)
@@ -75,14 +78,14 @@ namespace E_Learning.Controllers
                     var checkPassword = await CheckPassword(user, loginDto.Password);
                     if(checkPassword)
                     {
-                        List<Claim> userClaims =await CreateCliams(user);
-                        JwtSecurityToken jwtSecurity =await CreateToken(userClaims);
+                        List<Claim> userClaims =await tokenServices.CreateCliams(user);
+                        JwtSecurityToken jwtSecurity =await tokenServices.CreateToken(userClaims,user);
 
                         return Ok(new
                         {
                             message = "Login succesffully",
                             token = new JwtSecurityTokenHandler().WriteToken(jwtSecurity),
-                            expiration = DateTime.Now.AddDays(1)
+                            expiration = DateTime.Now.AddDays(7)
 
                         });
                     }
@@ -139,33 +142,43 @@ namespace E_Learning.Controllers
             return BadRequest();
         }
         [Authorize]
-        [HttpPost("DeleteAccount")]
-        public async Task<IActionResult> DeleteAccount()
-        {
-            var user = await GetUserAsync();
-            var result = await userManager.DeleteAsync(user);
-            if(result.Succeeded)
-            {
-                return Ok($"Remove Accpunt {user.UserName} Successfully");
-            }
-            foreach(var error in result.Errors)
-            {
-                ModelState.AddModelError("", error.Description);
-            }
-            return BadRequest(ModelState);
-        }
-        [Authorize]
         [HttpPost("Logout")]
         public async Task<IActionResult> Logout()
         {
-            var result =  HttpContext.SignOutAsync();
-            if (result.IsCompleted)
-            {
-                return Ok("Logout Successfully");
-            }
-           
-            return BadRequest(result.Exception.Data.Values);
+            await HttpContext.SignOutAsync();
+            return Ok("Logout Successfully");
         }
+      
+        [Authorize]
+        [HttpPut("UpdateProfile")]
+        public async Task<IActionResult> UpdateProfile([FromForm] UpdateUserDto userDto)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await FindByNameAsync(userDto.UserName);
+                if (user != null)
+                {
+                    await ImageHelper.ProcessDeleteImage(user.profilePicture,webHostEnvironment);
+                    user.UserName = userDto.UserName;
+                    user.Email = userDto.UserEmail;
+                    user.PhoneNumber = userDto.UserPhone;
+                    user.updatedAt = DateTime.UtcNow;
+                    user.profilePicture = await ImageHelper.ProcessUploadedImage(userDto.ProfileImage, webHostEnvironment);
+
+                    var createValue = await userManager.UpdateAsync(user);
+                    if (createValue.Succeeded)
+                    {
+                        return Ok("Update profile succesffully");
+                    }
+                }
+
+                ModelState.AddModelError("", "We cant't Update  Profile Please Try again later");
+
+            }
+            Log.Information("", "in valid data {userDto}", userDto);
+            return BadRequest(ModelState);
+        }
+
         [Authorize]
         [HttpGet("UserProfile")]
         public async Task<IActionResult> GetUserProfile()
@@ -188,7 +201,23 @@ namespace E_Learning.Controllers
                     var dtos = mapper.Map<List<UseViewDto>>(users);
                     return Ok(dtos);
                 }
-                return NotFound($"No Users in this role {(roleName)}");
+                return NotFound($"No Users in this role");
+            }
+            return BadRequest(ModelState);
+        }
+        [Authorize]
+        [HttpDelete("DeleteAccount")]
+        public async Task<IActionResult> DeleteAccount()
+        {
+            var user = await GetUserAsync();
+            var result = await userManager.DeleteAsync(user);
+            if (result.Succeeded)
+            {
+                return Ok($"Remove Accpunt {user.UserName} Successfully");
+            }
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error.Description);
             }
             return BadRequest(ModelState);
         }
@@ -213,33 +242,6 @@ namespace E_Learning.Controllers
 
             return checkPassword;
         }
-        private async Task<List<Claim>> CreateCliams(ApplicationUser user)
-        {
-            List<Claim> userClaims = new List<Claim>();
-            userClaims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
-            userClaims.Add(new Claim(ClaimTypes.NameIdentifier, user.Id));
-            userClaims.Add(new Claim(ClaimTypes.Email, user.Email));
-            userClaims.Add(new Claim(ClaimTypes.Name, user.UserName));
-            userClaims.Add(new Claim(ClaimTypes.MobilePhone, user.PhoneNumber));
-            var role = await userManager.GetRolesAsync(user);
-            foreach (var item in role)
-            {
-                userClaims.Add(new Claim(ClaimTypes.Role, item));
-            }
-            return userClaims;
-        }
-        private async Task<JwtSecurityToken> CreateToken(List<Claim> userClaims)
-        {
-            var symmetric = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["JWT:SecritKey"]));
-            SigningCredentials signing = new SigningCredentials(symmetric, SecurityAlgorithms.HmacSha256);
-            JwtSecurityToken jwtSecurity = new JwtSecurityToken(
-                 audience: config["JWT:AudienceIP"],
-                 issuer: config["JWT:IssuerIP"],
-                 expires: DateTime.Now.AddDays(1),
-                 claims: userClaims,
-                 signingCredentials: signing
-             );
-            return jwtSecurity;
-        }
+       
     }
 }

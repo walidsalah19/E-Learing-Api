@@ -1,11 +1,11 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\8018c944-5945-4b6a-aee7-761d7e31b007_profile.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile.png'))">
       <SourceType>Package</SourceType>
       <SourceId>E-Learning</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/E-Learning</BasePath>
-      <RelativePath>Images/8018c944-5945-4b6a-aee7-761d7e31b007_profile.png</RelativePath>
+      <RelativePath>Images/dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -16,7 +16,25 @@
       <Integrity>cW6ojrhfnHRLeIsoWlhQSp2Z+Bj0W/n6vIN9P5GOjH0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\8018c944-5945-4b6a-aee7-761d7e31b007_profile.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\e9267217-1826-404e-bd7f-0dca6621c851_profile.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>E-Learning</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/E-Learning</BasePath>
+      <RelativePath>Images/e9267217-1826-404e-bd7f-0dca6621c851_profile.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>p6ok3lqfgg</Fingerprint>
+      <Integrity>cW6ojrhfnHRLeIsoWlhQSp2Z+Bj0W/n6vIN9P5GOjH0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\e9267217-1826-404e-bd7f-0dca6621c851_profile.png'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

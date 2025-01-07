@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5XnD6SzM1AKoproWsleREag41sRlGVRQAZZOflCFLVY=",
+  "Hash": "IPFieQAhxDT0UExEf/6NkmTR4C/SdAe1ZSQCfr8o5gM=",
   "Source": "E-Learning",
   "BasePath": "_content/E-Learning",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\8018c944-5945-4b6a-aee7-761d7e31b007_profile.png",
+      "Identity": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile.png",
       "SourceId": "E-Learning",
       "SourceType": "Discovered",
       "ContentRoot": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\",
       "BasePath": "_content/E-Learning",
-      "RelativePath": "Images/8018c944-5945-4b6a-aee7-761d7e31b007_profile#[.{fingerprint}]?.png",
+      "RelativePath": "Images/dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35,13 +35,34 @@
       "Integrity": "cW6ojrhfnHRLeIsoWlhQSp2Z+Bj0W/n6vIN9P5GOjH0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\8018c944-5945-4b6a-aee7-761d7e31b007_profile.png"
+      "OriginalItemSpec": "wwwroot\\Images\\dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile.png"
+    },
+    {
+      "Identity": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\e9267217-1826-404e-bd7f-0dca6621c851_profile.png",
+      "SourceId": "E-Learning",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\",
+      "BasePath": "_content/E-Learning",
+      "RelativePath": "Images/e9267217-1826-404e-bd7f-0dca6621c851_profile#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "p6ok3lqfgg",
+      "Integrity": "cW6ojrhfnHRLeIsoWlhQSp2Z+Bj0W/n6vIN9P5GOjH0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\e9267217-1826-404e-bd7f-0dca6621c851_profile.png"
     }
   ],
   "Endpoints": [
     {
-      "Route": "Images/8018c944-5945-4b6a-aee7-761d7e31b007_profile.p6ok3lqfgg.png",
-      "AssetFile": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\8018c944-5945-4b6a-aee7-761d7e31b007_profile.png",
+      "Route": "Images/dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile.p6ok3lqfgg.png",
+      "AssetFile": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -62,7 +83,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 23 Dec 2024 12:49:31 GMT"
+          "Value": "Tue, 07 Jan 2025 17:20:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -76,7 +97,7 @@
         },
         {
           "Name": "label",
-          "Value": "Images/8018c944-5945-4b6a-aee7-761d7e31b007_profile.png"
+          "Value": "Images/dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile.png"
         },
         {
           "Name": "integrity",
@@ -85,8 +106,8 @@
       ]
     },
     {
-      "Route": "Images/8018c944-5945-4b6a-aee7-761d7e31b007_profile.png",
-      "AssetFile": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\8018c944-5945-4b6a-aee7-761d7e31b007_profile.png",
+      "Route": "Images/dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile.png",
+      "AssetFile": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -107,7 +128,89 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 23 Dec 2024 12:49:31 GMT"
+          "Value": "Tue, 07 Jan 2025 17:20:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cW6ojrhfnHRLeIsoWlhQSp2Z+Bj0W/n6vIN9P5GOjH0="
+        }
+      ]
+    },
+    {
+      "Route": "Images/e9267217-1826-404e-bd7f-0dca6621c851_profile.p6ok3lqfgg.png",
+      "AssetFile": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\e9267217-1826-404e-bd7f-0dca6621c851_profile.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32174"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cW6ojrhfnHRLeIsoWlhQSp2Z+Bj0W/n6vIN9P5GOjH0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Dec 2024 23:36:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p6ok3lqfgg"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/e9267217-1826-404e-bd7f-0dca6621c851_profile.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cW6ojrhfnHRLeIsoWlhQSp2Z+Bj0W/n6vIN9P5GOjH0="
+        }
+      ]
+    },
+    {
+      "Route": "Images/e9267217-1826-404e-bd7f-0dca6621c851_profile.png",
+      "AssetFile": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\e9267217-1826-404e-bd7f-0dca6621c851_profile.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32174"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cW6ojrhfnHRLeIsoWlhQSp2Z+Bj0W/n6vIN9P5GOjH0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Dec 2024 23:36:08 GMT"
         },
         {
           "Name": "Cache-Control",

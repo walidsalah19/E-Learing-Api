@@ -12,7 +12,6 @@ namespace E_Learning.Mapper
                        .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.UserName))
                        .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.UserEmail))
                        .ForMember(dest => dest.createdAt, opt => opt.MapFrom(src => DateTime.Now))
-                       .ForMember(dest => dest.updatedAt, opt => opt.MapFrom(src => DateTime.Now))
                        .ForMember(dest => dest.PhoneNumber, opt => opt.MapFrom(src => src.UserPhone));
           
             CreateMap<ApplicationUser,UseViewDto>()

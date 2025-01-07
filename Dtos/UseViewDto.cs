@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace E_Learning.Dtos
 {
@@ -9,5 +10,6 @@ namespace E_Learning.Dtos
         [DataType(DataType.DateTime)]
         public DateTime updatedAt { get; set; }
         public String ProfileImage { get; set; }
+        
     }
 }

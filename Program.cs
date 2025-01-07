@@ -1,6 +1,8 @@
 ﻿
 using E_Learning.Data;
+using E_Learning.Interfaces.IServices;
 using E_Learning.Models;
+using E_Learning.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -32,7 +34,7 @@ namespace E_Learning
                 {
                     Version = "v1",
                     Title = "ASP.NET�8�Web�API",
-                    Description = "E-commarce project "
+                    Description = "E-Learning project "
                 });
                 //�To�Enable�authorization�using�Swagger�(JWT)����
                 swagger.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
@@ -114,6 +116,11 @@ namespace E_Learning
                         .MinimumLevel.Information() // Set the minimum log level
                         .WriteTo.Console()    // Log to console
                         .CreateLogger();
+
+            builder.Services.AddScoped<ITokenServices, TokenServices>();
+
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -131,6 +138,7 @@ namespace E_Learning
 
             //app.UseAuthorization();
 
+           // app.UseMiddleware<JwtBlacklistMiddleware>();
 
             app.MapControllers();
 

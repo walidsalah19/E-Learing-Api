@@ -1,8 +1,12 @@
 {
   "Files": [
     {
-      "Id": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\8018c944-5945-4b6a-aee7-761d7e31b007_profile.png",
-      "PackagePath": "staticwebassets\\Images\\8018c944-5945-4b6a-aee7-761d7e31b007_profile.png"
+      "Id": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile.png",
+      "PackagePath": "staticwebassets\\Images\\dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile.png"
+    },
+    {
+      "Id": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\e9267217-1826-404e-bd7f-0dca6621c851_profile.png",
+      "PackagePath": "staticwebassets\\Images\\e9267217-1826-404e-bd7f-0dca6621c851_profile.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.E-Learning.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

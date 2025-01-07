@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "ASP.NET�8�Web�API",
-    "description": "E-commarce project ",
+    "description": "E-Learning project ",
     "version": "v1"
   },
   "paths": {
@@ -16,6 +16,7 @@
             "multipart/form-data": {
               "schema": {
                 "required": [
+                  "Password",
                   "ProfileImage",
                   "Role",
                   "UserEmail",
@@ -24,6 +25,15 @@
                 ],
                 "type": "object",
                 "properties": {
+                  "Password": {
+                    "minLength": 8,
+                    "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&#])[A-Za-z\\d@$!%*?&#]{8,}$",
+                    "type": "string"
+                  },
+                  "Role": {
+                    "pattern": "^(Admin|instructor|student)$",
+                    "type": "string"
+                  },
                   "UserName": {
                     "maxLength": 25,
                     "minLength": 3,
@@ -40,19 +50,16 @@
                   "UserPhone": {
                     "type": "string",
                     "format": "tel"
-                  },
-                  "Password": {
-                    "minLength": 8,
-                    "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&#])[A-Za-z\\d@$!%*?&#]{8,}$",
-                    "type": "string"
-                  },
-                  "Role": {
-                    "pattern": "^(Admin|instructor|student)$",
-                    "type": "string"
                   }
                 }
               },
               "encoding": {
+                "Password": {
+                  "style": "form"
+                },
+                "Role": {
+                  "style": "form"
+                },
                 "UserName": {
                   "style": "form"
                 },
@@ -63,12 +70,6 @@
                   "style": "form"
                 },
                 "UserPhone": {
-                  "style": "form"
-                },
-                "Password": {
-                  "style": "form"
-                },
-                "Role": {
                   "style": "form"
                 }
               }
@@ -156,7 +157,7 @@
         }
       }
     },
-    "/api/Account/DeleteAccount": {
+    "/api/Account/Logout": {
       "post": {
         "tags": [
           "Account"
@@ -168,11 +169,59 @@
         }
       }
     },
-    "/api/Account/Logout": {
-      "post": {
+    "/api/Account/UpdateProfile": {
+      "put": {
         "tags": [
           "Account"
         ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "ProfileImage",
+                  "UserEmail",
+                  "UserName",
+                  "UserPhone"
+                ],
+                "type": "object",
+                "properties": {
+                  "UserName": {
+                    "maxLength": 25,
+                    "minLength": 3,
+                    "type": "string"
+                  },
+                  "ProfileImage": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "UserEmail": {
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "UserPhone": {
+                    "type": "string",
+                    "format": "tel"
+                  }
+                }
+              },
+              "encoding": {
+                "UserName": {
+                  "style": "form"
+                },
+                "ProfileImage": {
+                  "style": "form"
+                },
+                "UserEmail": {
+                  "style": "form"
+                },
+                "UserPhone": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -205,6 +254,18 @@
               "type": "string"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Account/DeleteAccount": {
+      "delete": {
+        "tags": [
+          "Account"
         ],
         "responses": {
           "200": {

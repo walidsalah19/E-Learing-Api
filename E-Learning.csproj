@@ -29,9 +29,7 @@
 
   <ItemGroup>
     <Folder Include="Interfaces\IRepo\" />
-    <Folder Include="Interfaces\IServices\" />
     <Folder Include="Filters\" />
-    <Folder Include="Services\" />
     <Folder Include="Reposatories\" />
     <Folder Include="wwwroot\Images\" />
     <Folder Include="wwwroot\Files\" />
