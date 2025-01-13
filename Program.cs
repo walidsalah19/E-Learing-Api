@@ -1,7 +1,9 @@
 ﻿
 using E_Learning.Data;
+using E_Learning.Interfaces.IRepo;
 using E_Learning.Interfaces.IServices;
 using E_Learning.Models;
+using E_Learning.Reposatories;
 using E_Learning.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -118,6 +120,9 @@ namespace E_Learning
                         .CreateLogger();
 
             builder.Services.AddScoped<ITokenServices, TokenServices>();
+            builder.Services.AddScoped<ICourseRepo, CoursesRepo>();
+            builder.Services.AddScoped<ICourseService, CourseService>();
+
 
 
 

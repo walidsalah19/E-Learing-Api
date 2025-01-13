@@ -31,7 +31,7 @@
                     "type": "string"
                   },
                   "Role": {
-                    "pattern": "^(Admin|Instructor|Student)$",
+                    "pattern": "^(Admin|Instracture|Student)$",
                     "type": "string"
                   },
                   "UserName": {
@@ -266,6 +266,104 @@
       "delete": {
         "tags": [
           "Account"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Courses/AddCourse": {
+      "post": {
+        "tags": [
+          "Courses"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "category",
+                  "description",
+                  "instractureId",
+                  "language",
+                  "level",
+                  "price",
+                  "thumbnail",
+                  "title"
+                ],
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "thumbnail": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "category": {
+                    "type": "string"
+                  },
+                  "language": {
+                    "type": "string"
+                  },
+                  "level": {
+                    "pattern": "^(Begginner|Midlevel|Advances)$",
+                    "type": "string"
+                  },
+                  "price": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "instractureId": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "title": {
+                  "style": "form"
+                },
+                "description": {
+                  "style": "form"
+                },
+                "thumbnail": {
+                  "style": "form"
+                },
+                "category": {
+                  "style": "form"
+                },
+                "language": {
+                  "style": "form"
+                },
+                "level": {
+                  "style": "form"
+                },
+                "price": {
+                  "style": "form"
+                },
+                "instractureId": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Courses/AllCourses": {
+      "get": {
+        "tags": [
+          "Courses"
         ],
         "responses": {
           "200": {

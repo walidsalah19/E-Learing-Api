@@ -11,6 +11,8 @@ namespace E_Learning.Data
         public DbSet<Enrollment> enrollments { get; set; }
         public DbSet<Lesson> lessons { get; set; }
         public DbSet<Rating> Ratings { get; set; }
+        public DbSet<Student> students { get; set; }
+
 
         public AppDbContext(DbContextOptions options) : base(options)
         {

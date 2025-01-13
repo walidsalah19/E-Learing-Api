@@ -1,5 +1,8 @@
+wwwroot\Images\025476c9-0891-4567-a5bd-f77822be1f0d_profile.png
 wwwroot\Images\0e49cf38-be85-4311-9a5f-da206f69f1ee_profile.png
 wwwroot\Images\3011d54c-bf75-4c59-9d2b-39fa1e79f33d_profile.png
+wwwroot\Images\8562eb5c-bc68-44c2-93ca-e172b0c0dd14_coffee_cup.png
 wwwroot\Images\be70dbb7-71e8-4060-ba0f-9817258f9aa1_profile.png
+wwwroot\Images\ca6c89ad-b6a0-45b1-8c48-22ec9df5a59d_coffee_cup.png
 wwwroot\Images\dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile.png
 wwwroot\Images\e9267217-1826-404e-bd7f-0dca6621c851_profile.png

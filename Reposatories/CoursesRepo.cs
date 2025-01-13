@@ -33,18 +33,18 @@ namespace E_Learning.Reposatories
 
         public List<Course> AllCourseInCategory(string category)
         {
-            var courses = context.courses.Where(x => x.category.Equals(category)).ToList();
+            var courses = context.courses.Include(x=>x.Ratings).Where(x => x.category.Equals(category)).ToList();
             return courses;
         }
 
         public List<Course> AllCourses()
         {
-            return context.courses.ToList();
+            return context.courses.Include(x => x.Ratings).ToList();
         }
 
         public List<Course> AllStudentInCourse(int id)
         {
-            var courses = context.courses.Include(x=>x.students).ToList();
+            var courses = context.courses.Include(x => x.Ratings).Include(x=>x.students).ToList();
             return courses;
         }
 
@@ -96,17 +96,35 @@ namespace E_Learning.Reposatories
 
         public List<Course> StudentCourses(string id)
         {
-            throw new NotImplementedException();
+            var courses = context.students.Include(x=>x.Courses).ThenInclude(x=>x.Ratings).FirstOrDefault(x => x.Id.Equals(id)).Courses.ToList();
+            return courses;
         }
 
         public List<Course> TopRatingCourses()
         {
-            throw new NotImplementedException();
+            var courses = context.courses.Include(x => x.Ratings).OrderByDescending(x => x.Ratings.Sum(x => x.rating));
+
+            return courses.ToList();
         }
 
-        public Task<string> UpdateCourse(Course course)
+        public async Task<string> UpdateCourse(Course course)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var co = await CourseById(course.Id);
+                if (co != null)
+                {
+                    var result = context.courses.Update(course);
+                    if (result != null)
+                        return "Success";
+
+                }
+                throw new Exception("cant update");
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
         }
     }
 }
