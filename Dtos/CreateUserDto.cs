@@ -15,7 +15,7 @@ namespace E_Learning.Dtos
         public string Password { get; set; }
 
         [Required]
-        [RegularExpression("^(Admin|instructor|student)$", ErrorMessage = "Role must be 'admin', 'instructor', or 'student'.")]
+        [RegularExpression("^(Admin|Instructor|Student)$", ErrorMessage = "Role must be 'admin', 'instructor', or 'student'.")]
         public string Role { get; set; }
     }
 }

@@ -149,36 +149,7 @@ namespace E_Learning.Controllers
             return Ok("Logout Successfully");
         }
       
-        [Authorize]
-        [HttpPut("UpdateProfile")]
-        public async Task<IActionResult> UpdateProfile([FromForm] UpdateUserDto userDto)
-        {
-            if (ModelState.IsValid)
-            {
-                var user = await FindByNameAsync(userDto.UserName);
-                if (user != null)
-                {
-                    await ImageHelper.ProcessDeleteImage(user.profilePicture,webHostEnvironment);
-                    user.UserName = userDto.UserName;
-                    user.Email = userDto.UserEmail;
-                    user.PhoneNumber = userDto.UserPhone;
-                    user.updatedAt = DateTime.UtcNow;
-                    user.profilePicture = await ImageHelper.ProcessUploadedImage(userDto.ProfileImage, webHostEnvironment);
-
-                    var createValue = await userManager.UpdateAsync(user);
-                    if (createValue.Succeeded)
-                    {
-                        return Ok("Update profile succesffully");
-                    }
-                }
-
-                ModelState.AddModelError("", "We cant't Update  Profile Please Try again later");
-
-            }
-            Log.Information("", "in valid data {userDto}", userDto);
-            return BadRequest(ModelState);
-        }
-
+      
         [Authorize]
         [HttpGet("UserProfile")]
         public async Task<IActionResult> GetUserProfile()
@@ -205,6 +176,36 @@ namespace E_Learning.Controllers
             }
             return BadRequest(ModelState);
         }
+        [Authorize]
+        [HttpPut("UpdateProfile")]
+        public async Task<IActionResult> UpdateProfile([FromForm] UpdateUserDto userDto)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await FindByNameAsync(userDto.UserName);
+                if (user != null)
+                {
+                    await ImageHelper.ProcessDeleteImage(user.profilePicture, webHostEnvironment);
+                    user.UserName = userDto.UserName;
+                    user.Email = userDto.UserEmail;
+                    user.PhoneNumber = userDto.UserPhone;
+                    user.updatedAt = DateTime.UtcNow;
+                    user.profilePicture = await ImageHelper.ProcessUploadedImage(userDto.ProfileImage, webHostEnvironment);
+
+                    var createValue = await userManager.UpdateAsync(user);
+                    if (createValue.Succeeded)
+                    {
+                        return Ok("Update profile succesffully");
+                    }
+                }
+
+                ModelState.AddModelError("", "We cant't Update  Profile Please Try again later");
+
+            }
+            Log.Information("", "in valid data {userDto}", userDto);
+            return BadRequest(ModelState);
+        }
+
         [Authorize]
         [HttpDelete("DeleteAccount")]
         public async Task<IActionResult> DeleteAccount()

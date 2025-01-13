@@ -4,6 +4,7 @@ using E_Learning.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_Learning.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250112154328_add enrollment")]
+    partial class addenrollment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -116,7 +119,7 @@ namespace E_Learning.Migrations
 
                     b.Property<string>("category")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("createdAt")
                         .HasColumnType("datetime2");
@@ -134,7 +137,7 @@ namespace E_Learning.Migrations
 
                     b.Property<string>("level")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("price")
                         .HasColumnType("decimal(18,2)");
@@ -145,7 +148,7 @@ namespace E_Learning.Migrations
 
                     b.Property<string>("title")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("updatedAt")
                         .HasColumnType("datetime2");
@@ -154,13 +157,7 @@ namespace E_Learning.Migrations
 
                     SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"));
 
-                    b.HasIndex("category");
-
                     b.HasIndex("instractureId");
-
-                    b.HasIndex("level");
-
-                    b.HasIndex("title");
 
                     b.ToTable("Course", (string)null);
                 });
@@ -173,87 +170,11 @@ namespace E_Learning.Migrations
                     b.Property<int>("courseId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("enrolledAt")
-                        .HasColumnType("datetime2");
-
                     b.HasKey("studentId", "courseId");
 
                     b.HasIndex("courseId");
 
                     b.ToTable("Enrollments", (string)null);
-                });
-
-            modelBuilder.Entity("E_Learning.Models.Lesson", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("contentUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("courseId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("createdAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("duration")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("updateAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("courseId");
-
-                    b.HasIndex("title");
-
-                    b.ToTable("Lesson", (string)null);
-                });
-
-            modelBuilder.Entity("E_Learning.Models.Rating", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
-
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("StudentId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("rating")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("ratingTime")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("CourseId");
-
-                    b.HasIndex("StudentId", "CourseId")
-                        .IsUnique()
-                        .HasFilter("[StudentId] IS NOT NULL");
-
-                    b.ToTable("Rating", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -465,35 +386,6 @@ namespace E_Learning.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("E_Learning.Models.Lesson", b =>
-                {
-                    b.HasOne("E_Learning.Models.Course", "course")
-                        .WithMany("lessons")
-                        .HasForeignKey("courseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("course");
-                });
-
-            modelBuilder.Entity("E_Learning.Models.Rating", b =>
-                {
-                    b.HasOne("E_Learning.Models.Course", "Course")
-                        .WithMany("Ratings")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("E_Learning.Models.Student", "Student")
-                        .WithMany("Ratings")
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.SetNull);
-
-                    b.Navigation("Course");
-
-                    b.Navigation("Student");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -545,21 +437,9 @@ namespace E_Learning.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("E_Learning.Models.Course", b =>
-                {
-                    b.Navigation("Ratings");
-
-                    b.Navigation("lessons");
-                });
-
             modelBuilder.Entity("E_Learning.Models.Instractor", b =>
                 {
                     b.Navigation("Courses");
-                });
-
-            modelBuilder.Entity("E_Learning.Models.Student", b =>
-                {
-                    b.Navigation("Ratings");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,5 +1,41 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/E-Learning/Images/0e49cf38-be85-4311-9a5f-da206f69f1ee_profile.p6ok3lqfgg.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\0e49cf38-be85-4311-9a5f-da206f69f1ee_profile.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"p6ok3lqfgg"},{"Name":"integrity","Value":"sha256-cW6ojrhfnHRLeIsoWlhQSp2Z\u002BBj0W/n6vIN9P5GOjH0="},{"Name":"label","Value":"_content/E-Learning/Images/0e49cf38-be85-4311-9a5f-da206f69f1ee_profile.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"32174"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022cW6ojrhfnHRLeIsoWlhQSp2Z\u002BBj0W/n6vIN9P5GOjH0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 07 Jan 2025 17:45:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/E-Learning/Images/0e49cf38-be85-4311-9a5f-da206f69f1ee_profile.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\0e49cf38-be85-4311-9a5f-da206f69f1ee_profile.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-cW6ojrhfnHRLeIsoWlhQSp2Z\u002BBj0W/n6vIN9P5GOjH0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"32174"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022cW6ojrhfnHRLeIsoWlhQSp2Z\u002BBj0W/n6vIN9P5GOjH0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 07 Jan 2025 17:45:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/E-Learning/Images/3011d54c-bf75-4c59-9d2b-39fa1e79f33d_profile.p6ok3lqfgg.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\3011d54c-bf75-4c59-9d2b-39fa1e79f33d_profile.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"p6ok3lqfgg"},{"Name":"integrity","Value":"sha256-cW6ojrhfnHRLeIsoWlhQSp2Z\u002BBj0W/n6vIN9P5GOjH0="},{"Name":"label","Value":"_content/E-Learning/Images/3011d54c-bf75-4c59-9d2b-39fa1e79f33d_profile.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"32174"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022cW6ojrhfnHRLeIsoWlhQSp2Z\u002BBj0W/n6vIN9P5GOjH0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 07 Jan 2025 17:44:26 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/E-Learning/Images/3011d54c-bf75-4c59-9d2b-39fa1e79f33d_profile.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\3011d54c-bf75-4c59-9d2b-39fa1e79f33d_profile.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-cW6ojrhfnHRLeIsoWlhQSp2Z\u002BBj0W/n6vIN9P5GOjH0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"32174"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022cW6ojrhfnHRLeIsoWlhQSp2Z\u002BBj0W/n6vIN9P5GOjH0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 07 Jan 2025 17:44:26 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/E-Learning/Images/be70dbb7-71e8-4060-ba0f-9817258f9aa1_profile.p6ok3lqfgg.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\be70dbb7-71e8-4060-ba0f-9817258f9aa1_profile.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"p6ok3lqfgg"},{"Name":"integrity","Value":"sha256-cW6ojrhfnHRLeIsoWlhQSp2Z\u002BBj0W/n6vIN9P5GOjH0="},{"Name":"label","Value":"_content/E-Learning/Images/be70dbb7-71e8-4060-ba0f-9817258f9aa1_profile.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"32174"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022cW6ojrhfnHRLeIsoWlhQSp2Z\u002BBj0W/n6vIN9P5GOjH0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 07 Jan 2025 17:40:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/E-Learning/Images/be70dbb7-71e8-4060-ba0f-9817258f9aa1_profile.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\be70dbb7-71e8-4060-ba0f-9817258f9aa1_profile.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-cW6ojrhfnHRLeIsoWlhQSp2Z\u002BBj0W/n6vIN9P5GOjH0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"32174"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022cW6ojrhfnHRLeIsoWlhQSp2Z\u002BBj0W/n6vIN9P5GOjH0=\u0022"},{"Name":"Last-Modified","Value":"Tue, 07 Jan 2025 17:40:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/E-Learning/Images/dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile.p6ok3lqfgg.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

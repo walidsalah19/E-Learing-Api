@@ -1,6 +1,18 @@
 {
   "Files": [
     {
+      "Id": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\0e49cf38-be85-4311-9a5f-da206f69f1ee_profile.png",
+      "PackagePath": "staticwebassets\\Images\\0e49cf38-be85-4311-9a5f-da206f69f1ee_profile.png"
+    },
+    {
+      "Id": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\3011d54c-bf75-4c59-9d2b-39fa1e79f33d_profile.png",
+      "PackagePath": "staticwebassets\\Images\\3011d54c-bf75-4c59-9d2b-39fa1e79f33d_profile.png"
+    },
+    {
+      "Id": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\be70dbb7-71e8-4060-ba0f-9817258f9aa1_profile.png",
+      "PackagePath": "staticwebassets\\Images\\be70dbb7-71e8-4060-ba0f-9817258f9aa1_profile.png"
+    },
+    {
       "Id": "G:\\c# projects\\Apis\\E-Learning\\E-Learning\\wwwroot\\Images\\dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile.png",
       "PackagePath": "staticwebassets\\Images\\dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile.png"
     },
