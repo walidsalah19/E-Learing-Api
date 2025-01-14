@@ -6,3 +6,4 @@ wwwroot\Images\be70dbb7-71e8-4060-ba0f-9817258f9aa1_profile.png
 wwwroot\Images\ca6c89ad-b6a0-45b1-8c48-22ec9df5a59d_coffee_cup.png
 wwwroot\Images\dbdc4954-e01e-43a9-a2b4-bbb8b2dea8b0_profile.png
 wwwroot\Images\e9267217-1826-404e-bd7f-0dca6621c851_profile.png
+wwwroot\Images\fc298d54-956f-4048-b8ba-b650b7e7e8a0_coffee_cup.png

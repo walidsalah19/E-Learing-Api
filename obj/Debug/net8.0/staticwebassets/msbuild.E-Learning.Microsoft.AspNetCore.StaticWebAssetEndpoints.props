@@ -96,5 +96,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-cW6ojrhfnHRLeIsoWlhQSp2Z\u002BBj0W/n6vIN9P5GOjH0="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"32174"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022cW6ojrhfnHRLeIsoWlhQSp2Z\u002BBj0W/n6vIN9P5GOjH0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 23 Dec 2024 23:36:08 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/E-Learning/Images/fc298d54-956f-4048-b8ba-b650b7e7e8a0_coffee_cup.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\fc298d54-956f-4048-b8ba-b650b7e7e8a0_coffee_cup.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-f6ZfhW/vHYlsBYmpS9Un0TbFh3GwLWHCBQkhu5\u002BeXps="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"3453"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022f6ZfhW/vHYlsBYmpS9Un0TbFh3GwLWHCBQkhu5\u002BeXps=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 20:01:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/E-Learning/Images/fc298d54-956f-4048-b8ba-b650b7e7e8a0_coffee_cup.zrdfnnk1ng.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\fc298d54-956f-4048-b8ba-b650b7e7e8a0_coffee_cup.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"zrdfnnk1ng"},{"Name":"integrity","Value":"sha256-f6ZfhW/vHYlsBYmpS9Un0TbFh3GwLWHCBQkhu5\u002BeXps="},{"Name":"label","Value":"_content/E-Learning/Images/fc298d54-956f-4048-b8ba-b650b7e7e8a0_coffee_cup.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3453"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022f6ZfhW/vHYlsBYmpS9Un0TbFh3GwLWHCBQkhu5\u002BeXps=\u0022"},{"Name":"Last-Modified","Value":"Mon, 13 Jan 2025 20:01:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

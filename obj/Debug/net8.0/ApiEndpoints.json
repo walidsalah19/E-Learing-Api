@@ -221,6 +221,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "E_Learning.Controllers.CoursesController",
+    "Method": "CoursesByCategory",
+    "RelativePath": "api/Courses/Category",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "category",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "E_Learning.Controllers.RoleController",
     "Method": "AddRole",
     "RelativePath": "api/Role/AddRole",

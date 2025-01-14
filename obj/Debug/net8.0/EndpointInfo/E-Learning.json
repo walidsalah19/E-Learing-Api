@@ -312,7 +312,7 @@
                     "type": "string"
                   },
                   "level": {
-                    "pattern": "^(Begginner|Midlevel|Advances)$",
+                    "pattern": "^(Begginner|Midlevel|Advanced)$",
                     "type": "string"
                   },
                   "price": {
@@ -364,6 +364,27 @@
       "get": {
         "tags": [
           "Courses"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Courses/Category": {
+      "get": {
+        "tags": [
+          "Courses"
+        ],
+        "parameters": [
+          {
+            "name": "category",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "responses": {
           "200": {

@@ -16,7 +16,7 @@ namespace E_Learning.Dtos
         public string category { get; set; }
         [Required]
         public string language { get; set; }
-        [RegularExpression("^(Begginner|Midlevel|Advances)$", ErrorMessage = "Role must be 'admin', 'instructor', or 'student'.")]
+        [RegularExpression("^(Begginner|Midlevel|Advanced)$", ErrorMessage = "level must be 'Begginner', 'Midlevel', or 'Advanced'.")]
         [Required]
         public string level { get; set; }
         [Required]

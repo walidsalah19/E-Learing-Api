@@ -1,5 +1,6 @@
 ﻿using E_Learning.Dtos;
 using E_Learning.Interfaces.IServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,7 +16,7 @@ namespace E_Learning.Controllers
         {
             this.courseService = courseService;
         }
-
+        [Authorize(Roles = "Instracture")]
         [HttpPost("AddCourse")]
         public async Task<IActionResult> addCource([FromForm]CourseInputDto dto)
         {
@@ -36,6 +37,12 @@ namespace E_Learning.Controllers
         public async Task<IActionResult> AllCourses()
         {
             var all = courseService.AllCourses();
+            return Ok(all);
+        }
+        [HttpGet("Category")]
+        public async Task<IActionResult> CoursesByCategory(String category)
+        {
+            var all = courseService.AllCourseInCategory(category);
             return Ok(all);
         }
     }
